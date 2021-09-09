@@ -20,7 +20,10 @@
 
 <sub>\* Borrowed from Python zen with slight modifications. [[+]](https://www.python.org/dev/peps/pep-0020)</sup>
 
+## Table of contents
+
 - [JavaScript style guide](#javascript-style-guide)
+  - [Table of contents](#table-of-contents)
   - [Naming conventions](#naming-conventions)
     - [Folders and files](#folders-and-files)
     - [Pluralization](#pluralization)
@@ -162,6 +165,8 @@
         └── logger/
     ```
 
+[:top: back to top](#table-of-contents)
+
 ### Pluralization
 
   * Pluralize only collections.
@@ -232,6 +237,8 @@
     const topicsOfPrograms = ['skins', 'addons'];
     ```
 
+[:top: back to top](#table-of-contents)
+
 ### Variables
 
   * `camelCase` for variables.
@@ -250,6 +257,8 @@
     ```javascript
     const firstName = 'Benadryl';
     ```
+
+[:top: back to top](#table-of-contents)
 
 ### Acronyms
 
@@ -289,6 +298,8 @@
     }
     ```
 
+[:top: back to top](#table-of-contents)
+
 ### Abbreviations
 
   * `camelCase` for abbreviations.
@@ -309,6 +320,8 @@
     const androidAppName = 'Zoom'; // App[lication].
     ```
 
+[:top: back to top](#table-of-contents)
+
 ### Verbosity
 
   * Avoid use of abbreviations for naming—be verbose.
@@ -326,6 +339,8 @@
     const accountBalanceInSavings = 0;
     const damagePerSecond = 100;
     ```
+
+[:top: back to top](#table-of-contents)
 
 ### HashMaps
 
@@ -360,6 +375,8 @@
     };
     ```
 
+[:top: back to top](#table-of-contents)
+
 ### Constants
 
   * `UPPERCASE` for constants.
@@ -375,6 +392,8 @@
     const DAY = SECONDS * MINUTES * HOURS;
     const DAYS_UNTIL_TOMORROW = 1;
     ```
+
+[:top: back to top](#table-of-contents)
 
 ### Booleans
 
@@ -437,6 +456,8 @@
       ...
     }
     ```
+
+[:top: back to top](#table-of-contents)
 
 ### Functions
 
@@ -530,6 +551,8 @@
     | `build`    | Returns a new instance where many separate pieces of information are combined in some way.                              |
     | `generate` | Returns a new instance where a calculation is used to produce a value from an input.                                    |
 
+[:top: back to top](#table-of-contents)
+
 ### Constructors
 
   * `PascalCase` for constructors.
@@ -578,6 +601,8 @@
     }
     ```
 
+[:top: back to top](#table-of-contents)
+
 ### Enumerations
 
   * `PascalCase` for enumerations and value names. [[+]](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-1.1/4x252001(v=vs.71)?redirectedfrom=MSDN)
@@ -603,6 +628,8 @@
     };
     ```
 
+[:top: back to top](#table-of-contents)
+
 ### Measures
 
   * Use measures as suffix.
@@ -620,6 +647,8 @@
     const REQUEST_TIMEOUT_MS = 2000;
     const MIN_COMPRESSION_BYTE = 64;
     ```
+
+[:top: back to top](#table-of-contents)
 
 ### Counts
 
@@ -645,11 +674,15 @@
     const PROGRAM_INDEX = 2;
     ```
 
+[:top: back to top](#table-of-contents)
+
 ### Public modules
 
   * Don’t use descriptive names for public modules.
 
     > Descriptive names are anti-democratic. [[+]](https://hueniversedotcom.wordpress.com/2015/09/10/the-myth-of-descriptive-module-names).
+
+[:top: back to top](#table-of-contents)
 
 ### Asynchronous
 
@@ -704,6 +737,8 @@
     const programs = await whenPrograms;
     ```
 
+[:top: back to top](#table-of-contents)
+
 ### Generators
 
   * Use `gen` suffix when you have Generator version of the same function.
@@ -748,6 +783,8 @@
     }
     ```
 
+[:top: back to top](#table-of-contents)
+
 ## Formatting conventions
 
 ### Curly braces
@@ -770,6 +807,8 @@
       doSomething();
     }
     ```
+
+[:top: back to top](#table-of-contents)
 
 ### Block scopes
 
@@ -798,9 +837,13 @@
     }
     ```
 
+[:top: back to top](#table-of-contents)
+
 ## Programming practices
 
   * Be consistent with existing code.
+
+[:top: back to top](#table-of-contents)
 
 ### Exports
 
@@ -824,6 +867,8 @@
     }
     ```
 
+[:top: back to top](#table-of-contents)
+
 ### Functions
 
   * Use function syntax for functions.
@@ -833,6 +878,8 @@
   * Use arrow functions for callbacks.
 
     > Arrow syntax should be limited to closures.
+
+[:top: back to top](#table-of-contents)
 
 ### Decorations
 
@@ -865,6 +912,8 @@
     }
     ```
 
+[:top: back to top](#table-of-contents)
+
 ### Interfaces
 
   * Use interfaces over aliases where possible.
@@ -882,6 +931,8 @@
       (...args: any[]): Promise<any>;
     }
     ```
+
+[:top: back to top](#table-of-contents)
 
 ### Constructors
 
@@ -917,11 +968,15 @@
     const cacheClient = createRedisClient();
     ```
 
+[:top: back to top](#table-of-contents)
+
 ### Monorepos
 
   * Every package should contain all the needed dependencies.
 
     > Doing this allows us to cleanly decouple projects (packages) from one another, since you don't have to merge all their dependencies in one huge unmaintainable list. [[+]](https://yarnpkg.com/features/workspaces#what-does-it-mean-to-be-a-workspace)
+
+[:top: back to top](#table-of-contents)
 
 ### Comments
 
@@ -929,9 +984,13 @@
 
     > From a philosophical point of view, each line of code contains a technical debt for further support. Only the final functionality is the value. And if you can implement it without a single line (of commentary) at all, then everything is perfect. Otherwise, you should always have the **WHY** / **WHY motive** you added it for. Theoretically, this motive should be indicated in the commentary. The **WHAT** question is usually resolved by meaningful of the identifiers of classes, functions and variables. The question **HOW** should be clear from the code itself (also theoretically). [[+]](https://henrikwarne.com/2021/06/15/on-comments-in-code/) [[++]](https://habr.com/ru/post/562938/#comment_23154158)
 
+[:top: back to top](#table-of-contents)
+
 ### Composition
 
   * Use composition over inheritance.
+
+[:top: back to top](#table-of-contents)
 
 ## Goal
 
@@ -939,12 +998,16 @@ If we start from the fact that programming is a chain of taking decisions, the a
 
 Following guide is a set of different sources most of them conveniently linked.
 
+[:top: back to top](#table-of-contents)
+
 ## Other projects
 
 - [Daisugi](https://github.com/daisugiland/daisugi/blob/HEAD/packages/daisugi) is a minimalist functional middleware engine.
 - [Kintsugi](https://github.com/daisugiland/daisugi/blob/HEAD/packages/kintsugi) is a set of utilities to help build a fault tolerant services.
 - [Kado](https://github.com/daisugiland/daisugi/blob/HEAD/packages/kado) is a minimal and unobtrusive inversion of control container.
 - [Oza](https://github.com/daisugiland/daisugi/blob/HEAD/packages/oza) is a fast, opinionated, minimalist web framework for NodeJS.
+
+[:top: back to top](#table-of-contents)
 
 ## License
 
