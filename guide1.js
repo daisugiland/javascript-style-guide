@@ -1,0 +1,1 @@
+function guide1() {}
