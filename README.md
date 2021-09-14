@@ -163,7 +163,7 @@
     ```sh
     .
     └── src/
-        └── program-guards/
+        ├── program-guards/
         ├── auth/
         └── logger/
     ```
