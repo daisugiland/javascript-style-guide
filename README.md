@@ -37,6 +37,7 @@
     - [Contextualization](#contextualization)
     - [Timestamps](#timestamps)
     - [Functions](#functions)
+    - [Vocabulary](#vocabulary)
     - [Constructors](#constructors)
     - [Enumerations](#enumerations)
     - [Measures](#measures)
@@ -575,24 +576,29 @@
     ```
 
   * Skip `get` prefix when function is returning a boolean.
-  * Vocabulary: [[+]](https://docs.oracle.com/javase/tutorial/datetime/overview/naming.html)
 
-    | Prefix     | Description                                                                                                             |
-    | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
-    | `to`       | Convert object to another type.                                                                                         |
-    | `plus`     | Returns a copy object with the amount added.                                                                            |
-    | `minus`    | Returns a copy object with the amount subtracted.                                                                       |
-    | `with`     | Return a copy with element target.                                                                                      |
-    | `of`       | Returns an instance where the factory is primarily validating the input parameters, not converting them.                |
-    | `from`     | Converts the input parameters to an instance of the target object, which may involve losing information from the input. |
-    | `parse`    | Parses the input string to produce an instance of the target class.                                                     |
-    | `format`   | Uses the specified formatter to format the values in the temporal object.                                               |
-    | `at`       | Combines this object with another.                                                                                      |
-    | `get`      | Return a part of the state of the object.                                                                               |
-    | `list`     | Return a collection of part of the state of the object.                                                                 |
-    | `create`   | Returns a new instance on each invocation.                                                                              |
-    | `build`    | Returns a new instance where many separate pieces of information are combined in some way.                              |
-    | `generate` | Returns a new instance where a calculation is used to produce a value from an input.                                    |
+[:top: back to top](#table-of-contents)
+
+### Vocabulary
+
+  | Prefix     | Description                                                                                                             |
+  | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
+  | `to`       | Convert object to another type.                                                                                         |
+  | `plus`     | Returns a copy object with the amount added.                                                                            |
+  | `minus`    | Returns a copy object with the amount subtracted.                                                                       |
+  | `with`     | Return a copy with element target.                                                                                      |
+  | `of`       | Returns an instance where the factory is primarily validating the input parameters, not converting them.                |
+  | `from`     | Converts the input parameters to an instance of the target object, which may involve losing information from the input. |
+  | `parse`    | Parses the input string to produce an instance of the target class.                                                     |
+  | `format`   | Uses the specified formatter to format the values in the temporal object.                                               |
+  | `at`       | Combines this object with another.                                                                                      |
+  | `get`      | Return a part of the state of the object.                                                                               |
+  | `list`     | Return a collection of part of the state of the object.                                                                 |
+  | `create`   | Returns a new instance on each invocation.                                                                              |
+  | `build`    | Returns a new instance where many separate pieces of information are combined in some way.                              |
+  | `generate` | Returns a new instance where a calculation is used to produce a value from an input.                                    |
+  
+  <sup>Partial borrowed from oracle documentation. [[+]](https://docs.oracle.com/javase/tutorial/datetime/overview/naming.html)</sup>
 
 [:top: back to top](#table-of-contents)
 
