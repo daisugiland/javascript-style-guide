@@ -34,7 +34,10 @@
     - [HashMaps](#hashmaps)
     - [Constants](#constants)
     - [Booleans](#booleans)
+    - [Contextualization](#contextualization)
+    - [Timestamps](#timestamps)
     - [Functions](#functions)
+    - [Vocabulary](#vocabulary)
     - [Constructors](#constructors)
     - [Enumerations](#enumerations)
     - [Measures](#measures)
@@ -160,7 +163,7 @@
     ```sh
     .
     └── src/
-        └── program-guards/
+        ├── program-guards/
         ├── auth/
         └── logger/
     ```
@@ -397,14 +400,13 @@
 
 ### Booleans
 
-  * Use `is` or `has` as prefixes. [[+]](https://dev.to/michi/tips-on-naming-boolean-variables-cleaner-code-35ig)
+  * Use affirmative names.
+  * Use `is`, `are`, `have`, `has`, `can`, `should` or any other prefix which indicates a yes or no as response. [[+]](https://dev.to/michi/tips-on-naming-boolean-variables-cleaner-code-35ig)
 
     ❌  Bad
 
     ```javascript
     const isUsersLoggedIn = true;
-
-    const areUsersLoggedIn = true;
     ```
 
     ✔️  Good
@@ -459,25 +461,30 @@
 
 [:top: back to top](#table-of-contents)
 
-### Functions
+### Contextualization
 
-  * `camelCase` for functions.
-  * Recommended use **verbAdjectiveContextStructureHow** pattern, where verb stick to action, adjective act as modifier for a context, and context is the object being interacted with. Adjective, context, structure and how are optionals. [[+]](https://caseysoftware.com/blog/useful-naming-conventions)
+  * Do not add redundant context to variable names when the context is already provided by the containing object or class. [[+]](https://medium.com/geekculture/writing-clean-javascript-es6-edition-834e83abc746)
 
     ❌  Bad
 
     ```javascript
-    function programGetActiveById(programId) {
-      ...
-    }
+    const product = {
+      productId: "XXX-XXX",
+      productName: "book",
+    };
+
+    product.userId;
     ```
 
     ✔️  Good
 
     ```javascript
-    function findActiveProgramById(programId) {
-      ...
-    }
+    const user = {
+      id: "XXX-XXX",
+      name: "book",
+    };
+
+    product.id;
     ```
 
   * Do not contextualize the naming of the provided arguments to the functions.
@@ -532,24 +539,66 @@
     findProgramById({ programId });
     ```
 
-  * Vocabulary: [[+]](https://docs.oracle.com/javase/tutorial/datetime/overview/naming.html)
+[:top: back to top](#table-of-contents)
 
-    | Prefix     | Description                                                                                                             |
-    | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
-    | `to`       | Convert object to another type.                                                                                         |
-    | `plus`     | Returns a copy object with the amount added.                                                                            |
-    | `minus`    | Returns a copy object with the amount subtracted.                                                                       |
-    | `with`     | Return a copy with element target.                                                                                      |
-    | `of`       | Returns an instance where the factory is primarily validating the input parameters, not converting them.                |
-    | `from`     | Converts the input parameters to an instance of the target object, which may involve losing information from the input. |
-    | `parse`    | Parses the input string to produce an instance of the target class.                                                     |
-    | `format`   | Uses the specified formatter to format the values in the temporal object.                                               |
-    | `at`       | Combines this object with another.                                                                                      |
-    | `get`      | Return a part of the state of the object.                                                                               |
-    | `list`     | Return a collection of part of the state of the object.                                                                 |
-    | `create`   | Returns a new instance on each invocation.                                                                              |
-    | `build`    | Returns a new instance where many separate pieces of information are combined in some way.                              |
-    | `generate` | Returns a new instance where a calculation is used to produce a value from an input.                                    |
+### Timestamps
+
+  * Use `verbAt`.
+
+    ✔️  Good
+
+    ```javascript
+    const createdAt = new Date().toISOString();
+    const updatedAt = new Date().toISOString();
+    ```
+
+[:top: back to top](#table-of-contents)
+
+### Functions
+
+  * `camelCase` for functions.
+  * Recommended use **verbAdjectiveContextStructureHow** pattern, where verb stick to action, adjective act as modifier for a context, and context is the object being interacted with. Adjective, context, structure and how are optionals. [[+]](https://caseysoftware.com/blog/useful-naming-conventions)
+
+    ❌  Bad
+
+    ```javascript
+    function programGetActiveById(programId) {
+      ...
+    }
+    ```
+
+    ✔️  Good
+
+    ```javascript
+    function findActiveProgramById(programId) {
+      ...
+    }
+    ```
+
+  * Skip `get` prefix when function is returning a boolean.
+
+[:top: back to top](#table-of-contents)
+
+### Vocabulary
+
+  | Prefix     | Description                                                                                                             |
+  | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
+  | `to`       | Convert object to another type.                                                                                         |
+  | `plus`     | Returns a copy object with the amount added.                                                                            |
+  | `minus`    | Returns a copy object with the amount subtracted.                                                                       |
+  | `with`     | Return a copy with element target.                                                                                      |
+  | `of`       | Returns an instance where the factory is primarily validating the input parameters, not converting them.                |
+  | `from`     | Converts the input parameters to an instance of the target object, which may involve losing information from the input. |
+  | `parse`    | Parses the input string to produce an instance of the target class.                                                     |
+  | `format`   | Uses the specified formatter to format the values in the temporal object.                                               |
+  | `at`       | Combines this object with another.                                                                                      |
+  | `get`      | Return a part of the state of the object.                                                                               |
+  | `list`     | Return a collection of part of the state of the object.                                                                 |
+  | `create`   | Returns a new instance on each invocation.                                                                              |
+  | `build`    | Returns a new instance where many separate pieces of information are combined in some way.                              |
+  | `generate` | Returns a new instance where a calculation is used to produce a value from an input.                                    |
+  
+  <sup>Partial borrowed from oracle documentation. [[+]](https://docs.oracle.com/javase/tutorial/datetime/overview/naming.html)</sup>
 
 [:top: back to top](#table-of-contents)
 
